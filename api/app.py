@@ -1,16 +1,7 @@
-import os
-from flask import Flask, jsonify, request
-
-app = Flask(__name__)
-
-# # Set the path to Tesseract executable (update this with your actual Tesseract path)
-#pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
-
-
 @app.route('/')
-def hello():
-    return "<h1>Hello, World!! </h1>"
+def home():
+    return 'Hello, World!'
 
-if __name__ == '__main__':
-    app.run(debug=False)
-
+@app.route('/about')
+def about():
+    return 'About'
